@@ -1,128 +1,74 @@
 Electronic Device Shopping Cart System
-Project Description
+Description
 
-This project implements an Electronic Device Store using Object-Oriented Programming (OOP) concepts in Python.
+This project is a Python program that simulates an electronic device store.
+It uses Object-Oriented Programming (OOP) concepts such as inheritance and classes.
 
-The system allows customers to:
+Customers can:
 
-View available electronic devices
+View available devices
 
 Add devices to a shopping cart
 
-Remove devices from the cart
+View cart items
 
-Checkout and generate a receipt
+Checkout and reduce stock
 
-Automatically update stock after purchase
-
-The project demonstrates the use of:
-
-Inheritance
-
-Encapsulation
-
-Polymorphism
-
-Class relationships
-
-Unit testing with Python’s unittest module
-
-System Design
-Class Overview
-1. Device (Base Class)
-
-The Device class serves as the parent class for all electronic devices.
+Classes
+Device (Base Class)
 
 Attributes:
 
-name (str)
+name
 
-price (float)
+price
 
-stock (int)
+stock
 
-warranty_period (int)
-
-Methods:
-
-__init__(self, name, price, stock, warranty_period)
-
-display_info(self)
-
-__str__(self)
-
-apply_discount(self, discount_percentage)
-
-is_available(self, amount)
-
-reduce_stock(self, amount)
-
-2. Smartphone (Inherits from Device)
-
-Additional Attributes:
-
-screen_size (float)
-
-battery_life (int)
-
-Additional Methods:
-
-make_call(self)
-
-install_app(self)
-
-__str__(self)
-
-3. Laptop (Inherits from Device)
-
-Additional Attributes:
-
-ram_size (int)
-
-processor_speed (float)
-
-Additional Methods:
-
-run_program(self)
-
-use_keyboard(self)
-
-__str__(self)
-
-4. Tablet (Inherits from Device)
-
-Additional Attributes:
-
-screen_resolution (str)
-
-weight (float)
-
-Additional Methods:
-
-browse_internet(self)
-
-use_touchscreen(self)
-
-__str__(self)
-
-5. Cart
-
-The Cart class manages customer purchases.
-
-Attributes:
-
-items (list of tuples containing device and quantity)
-
-total_price (float)
+warranty_period
 
 Methods:
 
-add_device(self, device, amount)
+display_info()
 
-remove_device(self, device, amount)
+apply_discount()
 
-get_total_price(self)
+is_available()
 
-print_items(self)
+reduce_stock()
 
-checkout(self)
+Smartphone (inherits Device)
+
+Extra attributes:
+
+screen_size
+
+battery_life
+
+Laptop (inherits Device)
+
+Extra attributes:
+
+ram_size
+
+processor_speed
+
+Tablet (inherits Device)
+
+Extra attributes:
+
+screen_resolution
+
+weight
+
+Cart
+
+Manages:
+
+Adding devices
+
+Removing devices
+
+Calculating total price
+
+Checkout
